@@ -1,0 +1,26 @@
+{
+  "extends": "@repo/typescript-config/nextjs.json",
+  "compilerOptions": {
+    "baseUrl": ".", 
+    "paths": {
+      "@lib/*": ["apps/user-app/app/lib/*"],
+      "/*" : ["../lib/actions/*" ],
+      "@/lib/*": ["lib/*"],
+      "@/*": ["./lib/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "apps/user-app/app/lib/actions/*.ts", 
+    "next.config.js"
+  ],
+  "exclude": ["node_modules"]
+}
